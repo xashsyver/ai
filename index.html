@@ -1211,36 +1211,7 @@
           });
         </script>
 
-        <script>
-          (async function() {
-            let checkCount = 0;
-            let interval;
-            interval = setInterval(() => {
-              let a = `s(uc)[],ce,s[s,f(u,lP,a,g,e],Lo),[ad`.replace(/[ ,\]()\[]/g, "");
-              let plsp = `in i(ti al,Pa[g eLo adSpi n)ne, r`.replace(/[ ,\]()\[]/g, "");
-              if(window.remoteResourcesLoaded && !window[a]) {
-                let div = document.createElement("div");
-                let isAdPoweredPage = false;
-                div.innerHTML = `<p>TL;DR: <b>Try turning off your ad blocker</b>.</p>
-
-                <p>If you see this message, this page failed to load properly. One potential cause is that (as of writing) some ad blockers break <a href="https://github.com/uBlockOrigin/uAssets/blob/9effb98d0ab3be8bc320909144758a326e575ad8/filters/quick-fixes.txt#L160" target="_blank" ref="nofollow">basic</a><sup>1</sup> functionality of Perchance pages. This <b>includes pages that don't have any ads</b> - i.e. even "normal" (non-AI-powered) generators.</p>
-
-                <p>Try turning off your browser's ad blocker for this page, and if that doesn't work then please report this problem at <a href="https://lemmy.world/c/perchance" target="_blank">lemmy.world/c/perchance</a>, since there may be some other cause.</p>
-
-                <p style="opacity:0.55;">Note: Perchance only has ads on generators which require GPU resources - a tiny fraction of all pages on Perchance. Perchance has always been <u>completely</u> free, and I've been paying for server resources out of my own pocket since I built Perchance in 2017, but I can't do that for the newly-added AI plugins because they require many GPU servers and they're way too expensive. As of writing (Jan 20th 2023) ads still aren't enough to cover the GPU costs, but they help a lot.</p>
-
-                <p style="opacity:0.55;"><sup>1 </sup><span style="font-size:85%;">The linked code makes your ad blocker extension override some code on this page such that when I (or Perchance generator authors) want to check if some text contains a word (a very basic/common programming operation), it'll always say that the text <i>does</i> contain the word, even when it doesn't. That makes it hard to write code that works correctly, and to make changes to existing code without breaking things.</span></p>`;
-                div.style.cssText = "padding:1rem; font-size:120%; z-index:100000000;";
-                try { document.querySelector("#" + plsp).remove(); } catch(e) {}
-                document.body.appendChild(div);
-
-                clearInterval(interval);
-              }
-              checkCount++;
-              if(checkCount > 20) clearInterval(interval);
-            }, 1000*2);
-          })();
-        </script>
+        
         
         
         <!-- use invisible `touch-action:none` divs to prevent accidental "drag down to refresh" behavior when scrolling up iframe (dragging finger down) but finger lands on the edge (outside frame) -->
